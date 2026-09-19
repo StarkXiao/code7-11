@@ -1,0 +1,17 @@
+{
+  "name": "cold-chain-trace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "冷链温控追溯系统：车载传感器接入、实时超温判定、责任环节定位、运输批次完整回溯",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/cli/serve.js",
+    "demo": "node src/cli/demo.js",
+    "push-demo": "node src/cli/push-demo.js",
+    "test": "node --test test/"
+  }
+}
