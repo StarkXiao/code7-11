@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>冷链温控追溯平台</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">❄</span>
+      <div>
+        <h1>冷链温控追溯平台</h1>
+        <p>车载温度实时判定 · 责任环节定位 · 批次完整回溯</p>
+      </div>
+    </div>
+    <div class="live">
+      <span id="conn-dot" class="dot off"></span>
+      <span id="conn-text">实时连接中…</span>
+      <span class="seq">事件序号 <b id="seq">–</b></span>
+      <button id="btn-sim" class="btn primary" title="重新跑一遍三个责任剧本（会清空现有数据）">重置并运行模拟剧本</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="panel-head"><h2>运输批次</h2><span id="batch-count" class="badge">0</span></div>
+      <div id="batch-list" class="batch-list"></div>
+    </aside>
+
+    <section class="content" id="detail">
+      <div class="empty-hint">
+        <p>请选择左侧批次，或点击右上角「重置并运行模拟剧本」生成三个责任剧本数据。</p>
+        <p class="dim">剧本一 运输冷机故障（承运方责任）· 剧本二 预冷不合格（发货方责任）· 剧本三 签收后冷库失职（收货方责任）</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
